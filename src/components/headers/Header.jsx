@@ -18,6 +18,7 @@ const Header = ({ currentRef }) => {
     };
     const observer = new IntersectionObserver(observerCallback, {
       root: null,
+      rootMargin:"-90px",
       threshold: 0,
     });
     observer.observe(currentRef.current);

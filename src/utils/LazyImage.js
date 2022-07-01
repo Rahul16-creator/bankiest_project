@@ -3,12 +3,15 @@ import React, { useEffect, useRef, useState } from "react";
 const LazyImage = ({ src, alt, styles }) => {
   const [show, setShow] = useState(false);
   const imageRef = useRef(null);
+  const loadRef = useRef(null);
 
   const observerCallback = function (entries, observer) {
     const [entry] = entries;
     if (!entry.isIntersecting) {
       return;
     }
+    console.log(loadRef?.current);
+    // loadRef.current.addEventListener("load",(e)=>console.log(e))
     setShow(true);
   };
 
@@ -23,10 +26,10 @@ const LazyImage = ({ src, alt, styles }) => {
     };
   }, []);
 
-  if (show) return <img src={src} alt={alt} style={{ ...styles }} />;
+  if (show) return <img ref={loadRef} src={src} alt={alt} style={{ ...styles }} />;
   else
     return (
-      <span ref={imageRef} style={{ ...styles }}>
+      <span ref={imageRef} style={{ ...styles,filter: "blur(10px)",background:"grey" }}>
         Loading...
       </span>
     );

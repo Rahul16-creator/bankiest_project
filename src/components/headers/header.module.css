@@ -1,0 +1,32 @@
+.header {
+  position: relative;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 9rem;
+  color: #444444;
+  padding: 1rem 10rem;
+  transition: 0.5s;
+}
+
+.header.active {
+  background: #fff;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: headerpopUp 0.5s;
+}
+
+@keyframes headerpopUp {
+  0% {
+    transform: translateY(-90px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

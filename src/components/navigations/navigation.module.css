@@ -1,0 +1,41 @@
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4.2rem;
+  list-style: none;
+  font-family: inherit;
+  font-size: 1.7rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.list {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.list a {
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
+.openacc {
+  color: #222222;
+  background: var(--color-primary) !important;
+  border-radius: 3rem !important;
+  padding: 1.5rem 3rem !important;
+  font-size: inherit;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+
+.openacc:hover {
+    background: var(--color-primary-darker) !important;
+}

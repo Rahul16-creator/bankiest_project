@@ -1,0 +1,12 @@
+.logo {
+    position: relative;
+    height: 4.5rem;
+}
+
+.logo img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    cursor: pointer;
+}

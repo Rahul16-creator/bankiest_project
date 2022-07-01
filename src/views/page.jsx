@@ -12,8 +12,8 @@ const HeaderPage = () => {
       <ErrorBoundary>
         <React.Suspense fallback="Loading...">
           <Header currentRef={currentRef} />
-          <Home />
-          <Features currentRef={currentRef} />
+          <Home currentRef={currentRef}/>
+          <Features  />
         </React.Suspense>
       </ErrorBoundary>
     </React.Fragment>

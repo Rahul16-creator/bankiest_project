@@ -6,7 +6,6 @@ const LazyImage = ({ src, alt, styles }) => {
 
   const observerCallback = function (entries, observer) {
     const [entry] = entries;
-    console.log(entry.isIntersecting);
     if (!entry.isIntersecting) {
       return;
     }
@@ -16,7 +15,7 @@ const LazyImage = ({ src, alt, styles }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(observerCallback, {
       root: null,
-      threshold: 1,
+      threshold: 0,
     });
     observer.observe(imageRef.current);
     return () => {

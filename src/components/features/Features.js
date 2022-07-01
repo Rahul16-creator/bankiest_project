@@ -1,4 +1,5 @@
 import React from "react";
+import LazyImage from "../../utils/LazyImage";
 import "./features.css";
 
 const Features = ({ currentRef }) => {
@@ -9,7 +10,7 @@ const Features = ({ currentRef }) => {
         <h1>Everything you need in a modern bank and more.</h1>
       </div>
       <div className="feature_content">
-        <img src="/assets/digital.jpg" alt="Digital img" />
+        <LazyImage src="/assets/digital.jpg" alt="Digital img"  styles={{ position: "relative", width: "100%" ,height: "100%"}}/>
         <div className="feature_content_features">
           <div className="features_icon">
             <ion-icon name="tv-outline"></ion-icon>
@@ -24,9 +25,8 @@ const Features = ({ currentRef }) => {
           <h2>Watch your money grow</h2>
           <p>Nesciunt quos autem dolorum voluptates cum dolores dicta fuga inventore ab? Nulla incidunt eius numquam sequi iste pariatur quibusdam</p>
         </div>
-        <img src="/assets/card.jpg" alt="Card img" />
-        <img src="/assets/grow.jpg" alt="Grow img" />
-
+        <LazyImage src="/assets/card.jpg" alt="Digital img"  styles={{ position: "relative", width: "100%" ,height: "100%"}}/>
+        <LazyImage src="/assets/grow.jpg" alt="Digital img"  styles={{ position: "relative", width: "100%" ,height: "100%"}}/>
         <div className="feature_content_features">
           <div className="features_icon">
             <ion-icon name="server-outline"></ion-icon>

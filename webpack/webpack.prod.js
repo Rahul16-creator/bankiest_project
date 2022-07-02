@@ -14,7 +14,7 @@ module.exports = {
   },
   output: {
     filename: "main.[hash].js",
-    path: commonPaths.outputPath,
+    path: commonPaths.prodOutputPath,
     chunkFilename: `${commonPaths.jsFolder}/chunk.[name].[chunkhash].js`,
   },
   optimization: {

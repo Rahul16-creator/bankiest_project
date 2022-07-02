@@ -14,12 +14,10 @@ const SignupSection = React.lazy(() =>
   import("../components/signupSection/SignupSection")
 );
 
-
-
-const HeaderPage = ({showModal}) => {
+const HeaderPage = ({ showModal }) => {
   const currentRef = useRef(null);
   return (
-    <div className={`${showModal?'non_scroll':""}`}>
+    <div className={`${showModal ? "non_scroll" : ""}`}>
       <ErrorBoundary>
         {showModal && <Modal />}
         <React.Suspense fallback="Loading...">
@@ -28,19 +26,17 @@ const HeaderPage = ({showModal}) => {
           <Features />
           <Operations />
           <SignupSection />
+          <Footer />
         </React.Suspense>
-        <Footer />
       </ErrorBoundary>
     </div>
   );
 };
 
-
 function mapStateToProps(state) {
   return {
-    showModal:state.modal
-  }
+    showModal: state.modal,
+  };
 }
-
 
 export default connect(mapStateToProps)(HeaderPage);

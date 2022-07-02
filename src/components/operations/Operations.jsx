@@ -9,7 +9,7 @@ const Operations = () => {
     let data = tab_data.data[activeTab];
     return (
       <React.Fragment>
-        <div className="tab_icon">
+        <div className={`tab_icon tab_icon_${activeTab}`}>
           <ion-icon name={`${data.icon_name}`}></ion-icon>{" "}
         </div>
         <h1>{data.heading}</h1>
@@ -34,17 +34,17 @@ const Operations = () => {
       </div>
       <div className="operations">
         <div className="operation_tabs" onClick={tabSwitch}>
-          <span className="tab" data-tab="0">
+          <span className={`tab tab_secondary ${activeTab==="0"?'active':""}`} data-tab="0">
             <label>01</label>
-            instant transfers
+            Instant transfers
           </span>
-          <span className="tab" data-tab="1">
+          <span  className={`tab tab_primary ${activeTab==='1'?'active':""}`} data-tab="1">
             <label>02</label>
-            instant loans
+            Instant loans
           </span>
-          <span className="tab" data-tab="2">
+          <span  className={`tab tab_tertiary ${activeTab==='2'?'active':""}`} data-tab="2">
             <label>03</label>
-            instant closing
+            Instant closing
           </span>
         </div>
         <div className="operation_tab_content">{renderTabContent()}</div>

@@ -28,9 +28,7 @@ const Header = ({ currentRef }) => {
   }, [  navActive, currentRef]);
 
   return (
-    <div
-      className={`${headerStyle.header} ${navActive ? headerStyle.active : ""}`}
-    >
+    <div className={`${headerStyle.header} ${navActive ? headerStyle.active : ""}`}>
       <Logo />
       <Navigations />
     </div>

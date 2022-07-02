@@ -8,7 +8,6 @@ const Features = () => {
 
   const observerCallback = function (entries, observer) {
     const [entry] = entries;
-    console.log(entry.isIntersecting);
     if (!entry.isIntersecting) {
       return;
     }
@@ -28,12 +27,7 @@ const Features = () => {
   }, [sectionRef]);
 
   return (
-    <div
-      ref={sectionRef}
-      className={`section section-features ${
-        !reveal ? "section--hidden" : ""
-      }`}
-    >
+    <div ref={sectionRef} className={`section section-features ${!reveal ? "section--hidden" : ""}`}>
       <div className="feature_heading">
         <p>FEATURES</p>
         <h1>Everything you need in a modern bank and more.</h1>

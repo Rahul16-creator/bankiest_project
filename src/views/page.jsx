@@ -2,8 +2,10 @@ import React, { useRef } from "react";
 import Header from "../components/headers/Header";
 import ErrorBoundary from "../utils/ErrorBoundary";
 
+
 const Home = React.lazy(() => import("../components/home/Home"));
 const Features = React.lazy(() => import("../components/features/Features"));
+const Operations = React.lazy(() => import("../components/operations/Operations"));
 
 const HeaderPage = () => {
   const currentRef = useRef(null);
@@ -14,6 +16,7 @@ const HeaderPage = () => {
           <Header currentRef={currentRef} />
           <Home currentRef={currentRef}/>
           <Features  />
+          <Operations />
         </React.Suspense>
       </ErrorBoundary>
     </React.Fragment>

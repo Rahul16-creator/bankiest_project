@@ -1,0 +1,30 @@
+.section_operations {
+    position: relative;
+    height: 100vh;
+    padding:  10rem 5rem;
+    border-top: 1px solid #ddd;
+}
+
+.operation_heading {
+    position: relative;
+    width: 80rem;
+    margin:  0 auto 8rem auto;
+    /* background: #333; */
+}
+
+.operation_heading p {
+    position: relative;
+    font-size: 1.8rem;
+    color: var(--color-primary-darker);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.operation_heading h1 {
+    position: relative;
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #444444;
+    letter-spacing: 1.2px;
+}

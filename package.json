@@ -1,4 +1,5 @@
 {
+  "homepage": "http://rahul16-creator.github.io/bankiest_project/",
   "name": "bankist-project",
   "version": "0.1.0",
   "private": true,
@@ -17,7 +18,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack",
     "test": "react-scripts test",

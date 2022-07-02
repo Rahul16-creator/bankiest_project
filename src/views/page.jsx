@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
+import { connect } from "react-redux";
 import Footer from "../components/footer/Footer";
 import Header from "../components/headers/Header";
+import Modal from "../components/modals/Modal";
 import ErrorBoundary from "../utils/ErrorBoundary";
 
 const Home = React.lazy(() => import("../components/home/Home"));
@@ -14,11 +16,12 @@ const SignupSection = React.lazy(() =>
 
 
 
-const HeaderPage = () => {
+const HeaderPage = ({showModal}) => {
   const currentRef = useRef(null);
   return (
-    <React.Fragment>
+    <div className={`${showModal?'non_scroll':""}`}>
       <ErrorBoundary>
+        {showModal && <Modal />}
         <React.Suspense fallback="Loading...">
           <Header currentRef={currentRef} />
           <Home currentRef={currentRef} />
@@ -28,8 +31,16 @@ const HeaderPage = () => {
         </React.Suspense>
         <Footer />
       </ErrorBoundary>
-    </React.Fragment>
+    </div>
   );
 };
 
-export default HeaderPage;
+
+function mapStateToProps(state) {
+  return {
+    showModal:state.modal
+  }
+}
+
+
+export default connect(mapStateToProps)(HeaderPage);

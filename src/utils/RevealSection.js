@@ -1,7 +1,8 @@
 import React, { Component, createRef } from "react";
-
+import { connect } from "react-redux";
+import * as actions from "../actions"
 const RevealSection = (ChildComponent) => {
-  return class WrapperComponent extends Component {
+   class WrapperComponent extends Component {
     constructor(props) {
       super(props);
       this.sectionRef = createRef(null);
@@ -37,10 +38,13 @@ const RevealSection = (ChildComponent) => {
           sectionRef={this.sectionRef}
           feature_reveal={this.state.feature_reveal}
           signup_reveal={this.state.signup_reveal}
+          {...this.props}
         />
       );
     }
   };
+
+  return connect(null,actions)(WrapperComponent);
 };
 
 export default RevealSection;

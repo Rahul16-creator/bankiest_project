@@ -1,0 +1,114 @@
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  background: #f3f3f3;
+  padding: 6rem 7rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 100000;
+}
+
+.modal h1 {
+  position: relative;
+  font-family: inherit;
+  font-size: 3.25rem;
+  margin-bottom: 5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  word-spacing: 1.3px;
+  color: #444444;
+}
+
+.modal h1 .highlight {
+  position: relative;
+}
+
+.modal h1 .highlight::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  background: var(--gradient-primary);
+  transform: scale(1.07, 1.05) skewX(-15deg);
+}
+
+.modal .form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.modal .form .form_row {
+  position: relative;
+  display: flex;
+  /* background: #444444; */
+  width: 70%;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.modal .form .form_row label {
+  position: relative;
+  white-space: nowrap;
+  /* margin-right: 3rem; */
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #444444;
+}
+
+.modal .form .form_row input {
+  position: relative;
+  outline: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 70%;
+}
+
+.modal button {
+  position: relative;
+  padding: 1.5rem 5rem;
+  color: #000;
+  background: var(--color-primary-darker);
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.modal button:hover {
+  background: var(--color-primary);
+  color: #444444;
+}
+
+.modal_close {
+  position: absolute;
+  top: 2rem;
+  right: 1.5rem;
+  font-size: 4rem;
+  cursor: pointer;
+  color: #444444;
+  font-weight: bold;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}

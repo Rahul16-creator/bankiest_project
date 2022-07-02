@@ -2,7 +2,7 @@ import React from "react";
 import RevealSection from "../../utils/RevealSection";
 import "./signupSection.css";
 
-const SignupSection = ({sectionRef,signup_reveal}) => {
+const SignupSection = ({sectionRef,signup_reveal,hideModal}) => {
   return (
     <div className={`section section-signup `}>
       <div ref={sectionRef}  className={`section-signup-content ${!signup_reveal ? "section--hidden" : ""}`}  data-reveal="signup">
@@ -11,9 +11,11 @@ const SignupSection = ({sectionRef,signup_reveal}) => {
           today!
         </h3>
       </div>
-      <button className="btn section-signup-btn">Open your free account today!</button>
+      <button onClick={hideModal}  className="btn section-signup-btn">Open your free account today!</button>
     </div>
   );
 };
 
+
 export default RevealSection(SignupSection);
+

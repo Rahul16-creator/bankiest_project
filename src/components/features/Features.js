@@ -1,33 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import LazyImage from "../../utils/LazyImage";
+import RevealSection from "../../utils/RevealSection";
 import "./features.css";
 
-const Features = () => {
-  const [reveal, setReveal] = useState(false);
-  const sectionRef = useRef(null);
 
-  const observerCallback = function (entries, observer) {
-    const [entry] = entries;
-    if (!entry.isIntersecting) {
-      return;
-    }
-    setReveal(true);
-  };
+const Features = ({sectionRef,feature_reveal}) => {
 
-  useEffect(() => {
-
-    let observer = new IntersectionObserver(observerCallback, {
-      root: null,
-      threshold: 0.15,
-    });
-    observer.observe(sectionRef?.current);
-    return () => {
-      observer.disconnect(sectionRef);
-    };
-  }, [sectionRef]);
 
   return (
-    <div ref={sectionRef} className={`section section-features ${!reveal ? "section--hidden" : ""}`}>
+    <div ref={sectionRef} className={`section section-features ${!feature_reveal ? "section--hidden" : ""}`} data-reveal="feature">
       <div className="feature_heading">
         <p>FEATURES</p>
         <h1>Everything you need in a modern bank and more.</h1>
@@ -86,4 +67,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default RevealSection(Features);

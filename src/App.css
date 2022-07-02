@@ -49,8 +49,13 @@ a {
   text-decoration: none;
 }
 
-
 .section {
   position: relative;
   height: 100vh;
+  transition:0.8s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }

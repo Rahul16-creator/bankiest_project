@@ -9,7 +9,6 @@ const Header = ({ currentRef }) => {
   useEffect(() => {
     const observerCallback = function (entries, observer) {
       const [entry] = entries;
-      console.log(entry.isIntersecting);
       if (!entry.isIntersecting) {
         setNavActive(true);
       } else {

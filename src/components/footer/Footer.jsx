@@ -1,6 +1,7 @@
 import React from "react";
 import "./footer.css";
 import LazyImage from "../../utils/LazyImage";
+import footerLogoImg from "../../assets/icon.png";
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
         </ul>
       </div>
       <LazyImage
-        src="/assets/icon.png"
+        src={footerLogoImg}
         alt="Digital img"
         styles={{ position: "relative", width: "5rem", height: "5rem" }}
       />

@@ -1,5 +1,6 @@
 import React from "react";
 import "./home.css";
+import homeimg from "../../assets/hero.png"
 
 const Home = ({currentRef}) => {
   return (
@@ -17,7 +18,7 @@ const Home = ({currentRef}) => {
         </h1>
         <h4>A simpler banking experience for a simpler life.</h4>
         <a href="/#">Learn more ↓</a>
-        <img src="/assets/hero.png" alt="home_img" className="home_img" />
+        <img src={homeimg} alt="home_img" className="home_img" />
       </div>
     </div>
   );

@@ -2,7 +2,9 @@ import React from "react";
 import LazyImage from "../../utils/LazyImage";
 import RevealSection from "../../utils/RevealSection";
 import "./features.css";
-
+import digitImg from "../../assets/digital.jpg"
+import cardImg from "../../assets/card.jpg"
+import growImg from "../../assets/grow.jpg"
 
 const Features = ({sectionRef,feature_reveal}) => {
 
@@ -15,7 +17,7 @@ const Features = ({sectionRef,feature_reveal}) => {
       </div>
       <div className="feature_content">
         <LazyImage
-          src="/assets/digital.jpg"
+          src={digitImg}
           alt="Digital img"
           styles={{ position: "relative", width: "100%", height: "100%" }}
         />
@@ -42,13 +44,13 @@ const Features = ({sectionRef,feature_reveal}) => {
           </p>
         </div>
         <LazyImage
-          src="/assets/card.jpg"
-          alt="Digital img"
+          src={cardImg}
+          alt="Card img"
           styles={{ position: "relative", width: "100%", height: "100%" }}
         />
         <LazyImage
-          src="/assets/grow.jpg"
-          alt="Digital img"
+          src={growImg}
+          alt="Grow img"
           styles={{ position: "relative", width: "100%", height: "100%" }}
         />
         <div className="feature_content_features">

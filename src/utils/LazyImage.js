@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-
+import logo from "../assets/logo.png";
 const LazyImage = ({ src, alt, styles }) => {
   const [show, setShow] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -31,20 +31,13 @@ const LazyImage = ({ src, alt, styles }) => {
         src={src}
         alt={alt}
         style={{ ...styles }}
-        onLoad={() => {
-          console.log("loaded",imageLoaded);
-          setImageLoaded(true)}
-        }
+        onLoad={() => setImageLoaded(true)}
         className={`${!imageLoaded ? "image_blur" : ""}`}
       />
     );
   else
     return (
-      <span
-        ref={imageRef}
-        style={{ ...styles}}
-        className="image_blur"
-      >
+      <span ref={imageRef} style={{ ...styles }} className="image_blur">
         Loading...
       </span>
     );

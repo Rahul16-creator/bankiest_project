@@ -72,6 +72,6 @@ a {
 .image_blur {
   position: relative;
   filter: blur(10px);
-  background: rgba(92, 87, 87, 0.7);
+  background: rgba(187, 173, 173, 0.7);
   opacity: 0.7;
 }

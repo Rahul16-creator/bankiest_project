@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import logo from "../assets/logo.png";
+// import logo from "../assets/logo.png";
+
 const LazyImage = ({ src, alt, styles }) => {
   const [show, setShow] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -31,7 +32,9 @@ const LazyImage = ({ src, alt, styles }) => {
         src={src}
         alt={alt}
         style={{ ...styles }}
-        onLoad={() => setImageLoaded(true)}
+        onLoad={() => {
+          setImageLoaded(true);
+        }}
         className={`${!imageLoaded ? "image_blur" : ""}`}
       />
     );
@@ -40,6 +43,13 @@ const LazyImage = ({ src, alt, styles }) => {
       <span ref={imageRef} style={{ ...styles }} className="image_blur">
         Loading...
       </span>
+      // <img
+      //   ref={imageRef}
+      //   src={logo}
+      //   alt={alt}
+      //   style={{ ...styles }}
+      //   className={`${!imageLoaded ? "image_blur" : ""}`}
+      // />
     );
 };
 

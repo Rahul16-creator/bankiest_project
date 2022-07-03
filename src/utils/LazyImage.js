@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const LazyImage = ({ src, alt, styles }) => {
   const [show, setShow] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const imageRef = useRef(null);
 
   const observerCallback = function (entries, observer) {
@@ -9,6 +10,7 @@ const LazyImage = ({ src, alt, styles }) => {
     if (!entry.isIntersecting) {
       return;
     }
+    setImageLoaded(false);
     setShow(true);
   };
 
@@ -25,7 +27,13 @@ const LazyImage = ({ src, alt, styles }) => {
 
   if (show)
     return (
-      <img src={src} alt={alt} style={{ ...styles }} />
+      <img
+        src={src}
+        alt={alt}
+        style={{ ...styles }}
+        onLoad={() => setImageLoaded(true)}
+        className={`${!imageLoaded ? "image_blur" : ""}`}
+      />
     );
   else
     return (

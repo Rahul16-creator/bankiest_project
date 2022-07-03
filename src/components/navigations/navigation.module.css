@@ -43,7 +43,7 @@
 
 .menu_icon {
   position: fixed;
-  top: 10px;
+  top: 19px;
   right: 10px;
   height: 5rem;
   width: 5rem;
@@ -51,11 +51,12 @@
   align-items: center;
   justify-content: center;
   display: none;
-  z-index: 10000;
   transition: 0.5s;
+  z-index: 10000;
 }
 .menu_icon_active {
   color: #fff;
+  transition: 0.5s;
 }
 
 .menu_icon ion-icon {
@@ -78,7 +79,7 @@
 @media screen and (max-width: 768px) {
   .menu_icon {
     display: flex;
-    transition: 0.5s;
+    /* transition: 0.5s; */
   }
 
   .menu {
@@ -116,5 +117,12 @@
     font-size: 2rem;
     transition: 0.3s;
     font-weight: 500;
+  }
+}
+
+
+@media screen and (max-width:500px) {
+  .nav {
+    font-size: 2rem;
   }
 }

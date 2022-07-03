@@ -31,11 +31,10 @@
   }
 }
 
-
 /* Responsive Design */
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
   .header {
-  padding: 1rem 4rem;
+    padding: 1rem 3rem;
   }
 }

@@ -36,3 +36,49 @@
 .footer p span {
   color: #eee;
 }
+
+
+@media screen and (max-width:991px) {
+  .footer p  {
+    white-space:normal;
+  }
+}
+
+
+@media screen and (max-width:786px) {
+  .footer {
+    padding: 5rem 2rem;
+  }
+  .footer_list_items {
+    gap: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .footer_list {
+    margin-bottom: 3rem;
+  }
+  .footer p  {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width:570px) {
+  .footer {
+    padding: 4rem 1.5rem;
+  }
+  .footer_list_items {
+    font-size: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+
+  .footer_list {
+    margin-bottom: 3rem;
+  }
+  .footer p  {
+    font-size: 1rem;
+  }
+}

@@ -35,7 +35,86 @@
   font-weight: 500;
 }
 
-
 .openacc:hover {
-    background: var(--color-primary-darker) !important;
+  background: var(--color-primary-darker) !important;
+}
+
+/* menu */
+
+.menu_icon {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  z-index: 10000;
+  transition: 0.5s;
+}
+.menu_icon_active {
+  color: #fff;
+}
+
+.menu_icon ion-icon {
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+.menu.active {
+  transition: 0.5s;
+  left: 0%;
+}
+
+@media screen and (max-width: 991px) {
+  .nav {
+    gap: 3rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu_icon {
+    display: flex;
+    transition: 0.5s;
+  }
+
+  .menu {
+    position: fixed;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #444444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+    transition: all 0.5s;
+    z-index: 100;
+  }
+
+  .nav {
+    color: #fff;
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    font-size: 3rem;
+    text-transform: capitalize;
+    transform: translateY(-10rem);
+    transition: 0.5s;
+  }
+
+  .list {
+    text-align: start;
+  }
+
+  .openacc {
+    padding: 1rem 3rem !important;
+    font-size: 2rem;
+    transition: 0.3s;
+    font-weight: 500;
+  }
 }

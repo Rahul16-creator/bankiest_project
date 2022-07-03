@@ -2,25 +2,25 @@ import React from "react";
 import LazyImage from "../../utils/LazyImage";
 import RevealSection from "../../utils/RevealSection";
 import "./features.css";
-import digitImg from "../../assets/digital.jpg"
-import cardImg from "../../assets/card.jpg"
-import growImg from "../../assets/grow.jpg"
+import digitImg from "../../assets/digital.jpg";
+import cardImg from "../../assets/card.jpg";
+import growImg from "../../assets/grow.jpg";
 
-const Features = ({sectionRef,feature_reveal}) => {
-
-
+const Features = ({ sectionRef, feature_reveal }) => {
   return (
-    <div ref={sectionRef} className={`section section-features ${!feature_reveal ? "section--hidden" : ""}`} data-reveal="feature">
+    <div
+      ref={sectionRef}
+      className={`section section-features ${
+        !feature_reveal ? "section--hidden" : ""
+      }`}
+      data-reveal="feature"
+    >
       <div className="feature_heading">
         <p>FEATURES</p>
         <h1>Everything you need in a modern bank and more.</h1>
       </div>
       <div className="feature_content">
-        <LazyImage
-          src={digitImg}
-          alt="Digital img"
-          styles={{ position: "relative", width: "100%", height: "100%" }}
-        />
+        <LazyImage src={digitImg} alt="Digital img" />
         <div className="feature_content_features">
           <div className="features_icon">
             <ion-icon name="tv-outline"></ion-icon>
@@ -43,16 +43,8 @@ const Features = ({sectionRef,feature_reveal}) => {
             quibusdam
           </p>
         </div>
-        <LazyImage
-          src={cardImg}
-          alt="Card img"
-          styles={{ position: "relative", width: "100%", height: "100%" }}
-        />
-        <LazyImage
-          src={growImg}
-          alt="Grow img"
-          styles={{ position: "relative", width: "100%", height: "100%" }}
-        />
+        <LazyImage src={cardImg} alt="Card img" />
+        <LazyImage src={growImg} alt="Grow img" />
         <div className="feature_content_features">
           <div className="features_icon">
             <ion-icon name="server-outline"></ion-icon>

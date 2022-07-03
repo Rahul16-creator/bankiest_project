@@ -28,6 +28,7 @@ html {
 
 body {
   background: #f3f3f3;
+  overflow-x: hidden;
 }
 
 .btn {
@@ -60,7 +61,7 @@ a {
 .section--hidden {
   opacity: 0;
   transform: translateY(8rem);
-  transition: 0.8s;
+  transition: 0.5s;
 }
 
 .non_scroll {

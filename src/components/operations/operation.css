@@ -7,7 +7,7 @@
 
 .operation_heading {
   position: relative;
-  width: 80rem;
+  max-width: 80rem;
   margin: 0 auto 8rem auto;
   /* background: #333; */
 }
@@ -135,4 +135,129 @@
 
 .tab_tertiary {
   background: var(--color-tertiary);
+}
+
+/*  Responsive design */
+
+@media screen and (max-width: 991px) {
+  .section_operations {
+    height: 100%;
+    padding: 8rem 5rem;
+  }
+
+  .operations {
+    max-width: 80rem;
+  }
+
+  .operation_heading h1 {
+    font-size: 3rem;
+  }
+
+  .operation_tab_content {
+    padding: 0rem 5rem 6.5rem 5rem;
+  }
+
+  .operation_tabs .tab {
+    padding: 1rem 2.5rem;
+  }
+
+  .operation_tab_content h1 {
+    font-size: 2rem;
+  }
+
+  .operation_tab_content p {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .section_operations {
+    height: 100%;
+    padding: 5rem;
+  }
+
+  .operation_heading h1 {
+    font-size: 2.5rem;
+  }
+  .operation_tab_content h1 {
+    font-size: 1.8rem;
+  }
+  .operation_tab_content p {
+    font-size: 1.2rem;
+  }
+  .tab_icon {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .operation_tabs .tab {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .operation_tab_content {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    padding: 0rem 3rem 4.5rem 3rem;
+  }
+
+  .operation_heading h1 {
+    font-size: 2.4rem;
+  }
+  .tab_icon {
+    display: none;
+  }
+  .operation_tab_content p {
+    grid-column: 1;
+  }
+  .operation_tabs .tab {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section_operations {
+    padding: 3rem;
+  }
+  .operation_tab_content {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    padding: 0rem 2rem 3rem 2rem;
+  }
+
+  .operation_tabs .tab {
+    padding: .75rem 1.5rem;
+    font-size: 1.2rem;
+  }
+  .operation_tabs .tab label {
+    margin-right: .5rem;
+  }
+  .operation_tab_content h1 {
+    font-size: 1.5rem;
+  }
+
+  .operation_tab_content p {
+    font-size: 1rem;
+  }
+}
+
+
+
+@media screen and (max-width:560px) {
+
+  .operation_heading {
+    margin: 0 auto 5rem auto;
+  }
+
+  .operation_tabs .tab {
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .operation_heading h1 {
+    font-size: 2rem;
+  }
 }

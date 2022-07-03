@@ -30,3 +30,12 @@
     opacity: 1;
   }
 }
+
+
+/* Responsive Design */
+
+@media screen and (max-width:991px) {
+  .header {
+  padding: 1rem 4rem;
+  }
+}

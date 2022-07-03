@@ -83,3 +83,58 @@
   font-weight: 400;
   letter-spacing: 1px;
 }
+
+/*  Responsive Design */
+
+@media screen and (max-width: 991px) {
+  .feature_heading h1 {
+    font-size: 3rem;
+  }
+
+  .feature_content {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .feature_heading h1 {
+    font-size: 2.7rem;
+  }
+
+  .feature_heading p {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .feature_content {
+    grid-template-columns: 1fr;
+  }
+  .feature_content_features {
+    width: 100%;
+  }
+  .feature_heading h1 {
+    font-size: 2.4rem;
+  }
+  .feature_heading p {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .section-features {
+    padding: 5rem;
+  }
+
+  .feature_heading h1 {
+    font-size: 2rem;
+  }
+
+  .feature_content img {
+    display: none;
+  }
+  .feature_content_features {
+    padding: 3rem;
+    border: 1px solid #ddd;
+  }
+}

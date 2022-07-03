@@ -112,3 +112,85 @@
   backdrop-filter: blur(4px);
   z-index: 1000;
 }
+
+@media screen and (max-width: 991px) {
+  .modal {
+    width: 90rem;
+  }
+
+  .modal h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    padding: 6rem 3rem;
+    width: 70rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .modal {
+    width: 50rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .modal {
+    width: 40rem;
+  }
+
+  .modal .form {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal .form .form_row {
+    width: 100%;
+  }
+
+  .modal_close {
+    top: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .modal {
+    width: 35rem;
+  }
+
+  .modal h1 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .modal button {
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .modal {
+    width: 30rem;
+    padding: 4rem 3rem;
+  }
+
+  .modal h1 {
+    font-size: 1.6rem;
+  }
+
+  .modal .form .form_row label {
+    font-size: 1.4rem;
+  }
+
+  .modal .form {
+   gap: 2rem;
+  }
+}
+

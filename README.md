@@ -1,14 +1,14 @@
 Bankiest App
 
-to dev start : npm run dev
-to build : npm run build
+To dev start : npm run dev
+To build : npm run build
 
-to deploy 
+To deploy 
 
 create an app in github
-install gh-pages
+install gh-pages (npm i --save-dev gh-pages)
 add homepage,predploy,deploy attritubute in package.json
 
-after commit npm run deploy
+after commit do , npm run deploy
 git push 
-add changes in pages in remote github
+add changes in pages in remote github [for first time]

@@ -31,7 +31,10 @@ const LazyImage = ({ src, alt, styles }) => {
         src={src}
         alt={alt}
         style={{ ...styles }}
-        onLoad={() => setImageLoaded(true)}
+        onLoad={() => {
+          console.log("loaded",imageLoaded);
+          setImageLoaded(true)}
+        }
         className={`${!imageLoaded ? "image_blur" : ""}`}
       />
     );
@@ -39,7 +42,8 @@ const LazyImage = ({ src, alt, styles }) => {
     return (
       <span
         ref={imageRef}
-        style={{ ...styles, filter: "blur(10px)", background: "grey" }}
+        style={{ ...styles}}
+        className="image_blur"
       >
         Loading...
       </span>

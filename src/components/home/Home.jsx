@@ -23,6 +23,7 @@ const Home = ({ currentRef }) => {
           src={homeimg}
           alt="home_img"
           styles={{
+            height:"100%",
             width: "100%",
             gridColumn: "2 /3",
             gridRow: "1 / span 4",
